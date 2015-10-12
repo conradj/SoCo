@@ -897,13 +897,9 @@ class DidlPlaylistFavorite(DidlPlaylist):
 
     This class is not part of the DIDL spec and is Sonos specific.
     """
-
+    print ("conrad was ere")
     # the DIDL Lite class for this object.
     item_class = 'object.container.playlistContainer.sonos-favorite'
-    # Despite the fact that the item derives from object.container, it's
-    # XML does not include a <container> tag, but an <item> tag. This seems
-    # to be an error by Sonos.
-    tag = 'item'    
     
 
 
