@@ -890,21 +890,6 @@ class DidlMusicAlbumFavorite(DidlAlbum):
     # to be an error by Sonos.
     tag = 'item'
     
-class DidlPlaylistFavorite(DidlPlaylistContainer):
-
-    """Class that represents a Sonos favorite music playlist.
-    Added by Conrad Jackson (so that I can search for it when it breaks)
-
-    This class is not part of the DIDL spec and is Sonos specific.
-    """
-    print ("conrad was ere")
-    # the DIDL Lite class for this object.
-    item_class = 'object.container.playlistContainer.sonos-favorite'
-    # Despite the fact that the item derives from object.container, it's
-    # XML does not include a <container> tag, but an <item> tag. This seems
-    # to be an error by Sonos.
-    tag = 'item'
-
 
 class DidlMusicAlbumCompilation(DidlAlbum):
 
@@ -1001,6 +986,22 @@ class DidlPlaylistContainer(DidlContainer):
     )
 
 
+class DidlPlaylistFavorite(DidlPlaylistContainer):
+
+    """Class that represents a Sonos favorite music playlist.
+    Added by Conrad Jackson (so that I can search for it when it breaks)
+
+    This class is not part of the DIDL spec and is Sonos specific.
+    """
+    print ("conrad was ere")
+    # the DIDL Lite class for this object.
+    item_class = 'object.container.playlistContainer.sonos-favorite'
+    # Despite the fact that the item derives from object.container, it's
+    # XML does not include a <container> tag, but an <item> tag. This seems
+    # to be an error by Sonos.
+    tag = 'item'
+    
+    
 class DidlSameArtist(DidlPlaylistContainer):
 
     """Class that represents all tracks by a single artist.
